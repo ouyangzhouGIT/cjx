@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: 'sd';
+    src: url('./Reindeer-Christmas-2.otf');
+}
+@font-face {
+    font-family: 'tx';
+    src: url('./ShenHaiLiDeXingChen-2.ttf');
+}
+
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+body{
+    background-image: url('./bg.gif');
+}
+
+@keyframes mymove {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes mymove {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes starsAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes starsAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.to-cjx{
+    font-family: sd;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.to-cjx >div:nth-child(1){
+    font-family: 'tx';
+    font-size: 28px;
+}
+.to-cjx >div:nth-child(2){
+    font-size: 48px;
+}
+
+@media screen and (max-width: 800px) {
+    .tree-container{
+        width: 80% !important;
+    }
+}
+
+.tree-container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    height: 70%;
+    transform-style: preserve-3d;
+    transform: rotateX(5deg);
+}
+
+.tree-container .tree {
+    height: 100%;
+    position: relative;
+    animation: mymove;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform-style: preserve-3d;
+}
+.stars{
+    width: 50px;
+    position: absolute;
+    top: -48px;
+    left: calc(50% - 25px);
+    animation: starsAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+.trunk {
+    height: 100%;
+    width: 2px;
+    background-color: #999;
+    margin: 0 auto;
+}
+
+.branch {
+    position: absolute;
+    height: 20px;
+    line-height: 18px;
+    width: 100%;
+    transform-style: preserve-3d;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.branch-left>.branch-child {
+    float: left;
+    text-align: left;
+}
+
+.branch-right>.branch-child {
+    float: right;
+    text-align: right;
+}
+
+.branch-child {
+    border: 1px solid #666;
+    background-color: #fff;
+    height: 100%;
+    line-height: 18px;
+    width: 50%;
+    padding: 0 5px;
+    padding-right: 10px;
+    /* background-color: rgba(3, 169, 244, 0.8); */
+    background-color: rgba(75, 175, 80, 0.8);
+    color: #fff;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: tx;
+}
+
+.layer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: none;
+}
+.layer .content-warp{
+    width: 280px;
+    height: 300px;
+    background-image: url('./p2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.content{
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 48px;
+    font-family: tx;
+    font-weight: 600;
+    font-size: 13px;
+    padding-bottom: 65px;
+}
+.close{
+    position: absolute;
+    right: 15px;
+    top: 19px;
+    width: 16px;
+    height: 16px;
+}
+.content .left-text{
+    margin-bottom: 10px;
+}
+
+.content .btns{
+    position: absolute;
+    bottom: 44px;
+    height: 20px;
+    left: 0;
+    width: 100%;
+    padding-left: 48px;
+    padding-right: 85px;
+    display: flex;
+    justify-content: space-between;
+}
+.btns .socks{
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.btns .socks-left{
+    background-image: url('./socks-left.jpg');
+}
+.btns .socks-right{
+    background-image: url('./socks-right.png');
+}
+.video{
+    display: none;
+}
