@@ -242,7 +242,7 @@ body{
 }
 .video{
     display: none;
-    opacity: 0;
+    top: 0;
     position: absolute;
     z-index: -99;
 }

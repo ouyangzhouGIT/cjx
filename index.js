@@ -159,7 +159,7 @@ window.onload = function () {
             text_idx = Number(text_idx)
             if(!isOpenDialog){
                 isOpenDialog = true
-                dialogText.style.display = 'block'
+                // dialogText.style.display = 'block'
             }
             // dialogTextL.innerText = textList[text_idx].left
             // dialogTextR.innerText = textList[text_idx].right
